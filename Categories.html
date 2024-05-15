@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Categories </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    </head>
+
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        h1{
+            color: white;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+        }
+
+        .wrapper {
+            overflow: hidden;
+            max-width: 1200%;
+            margin-top: 20px;
+            position: relative;
+            align-items: center;
+        }
+
+        .wrapper i {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .wrapper i:active{
+            transform: translateY (-50%) scale (0.9);
+        }
+
+        .wrapper i:hover{
+            background: #e0d1d1e8;
+        }
+
+        .wrapper i:first-child{
+            left: -22px;
+        }
+
+        .wrapper i:last-child{
+            left: -22px;
+        }
+
+        .wrapper .carousel {
+            font-size: 0px;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+            cursor:pointer;
+            overflow: hidden;
+            width: 70%;
+            margin: auto;
+        }
+        .carousel img {
+            height: 350px;
+            width: calc(100%/3);
+            overflow: hidden;
+            object-fit: cover;
+            margin-left: 15px;
+            display: inline-block;
+        }
+
+        .carousel .dragging {
+            cursor: grab;
+            scroll-behavior: auto;
+        }
+
+        .carousel .dragging{
+            pointer-events: none;
+        }
+        
+        .description{
+            margin-bottom: 100px;
+            margin-top: 50px;
+            background-color: rgba(160, 124, 114, 0.655);
+            align-items: center;
+            font-size: large;
+            width: 70%;
+            text-align: center;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+        }
+        
+        .title {
+            color: white;
+            font-size: larger;
+        }
+
+        .pod-title {
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        .pod-desc {
+            color: white;
+            width: 80%;
+            padding: 10px 10px 10px 10px;
+            margin bottom: 10px;
+            font-size: medium;
+        }
+
+        iframe {
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width:900px) {
+            .carousel img {
+                width: calc(100%/2);
+            }
+        }
+
+        @media screen and (max-width:550px) {
+            .carousel img {
+                width: 100%;
+            }
+        }
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="HomeLoggedIn.html">Home</a>
+                <a href="Submit a story LoggedIn.html">Submit a story</a>
+                <a href="Categories.html">Categories</a>
+                <a href="ContactUs LoggedIn.html">Contact Us</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </header>
+    
+    
+    <div>
+        <body>
+        <div class="container">
+            <div class="welcome">
+                <h1>STORIES JUST FOR YOU</h1>
+            </div>
+            <div class="title">
+                <h2>Unsolved Registered</h2>
+            </div>
+            <div class="wrapper">
+                <i class="far fa-chevron-left"></i>
+                <div class="carousel">
+                    <a href="Scott LoggedIn.html"> <img src="Scott.avif" alt="img" draggable="false"></a>
+                    <a href="dupontstory LoggedIn.html"> <img src="DUPONT.jpg" alt="img" draggable="false"></a>
+                    <a href="Keith LoggedIn.html"> <img src="Keith.webp" alt="img" draggable="false"></a>
+                    <a href="wendystiry LoggedIn.html"> <img src="WENDY.jpeg" alt="img" draggable="false"></a>
+                    <a href="miguel LoggedIn.html"> <img src="miguel.jpg" alt="img" draggable="false"></a>
+                </div>
+                <i class="far fa-chevron-right"></i>
+            </div>
+            <div class="wrapper">
+                <div class="description">
+                    <p>Stories that have already been recorded by the authorities, 
+                        and have had the case investigated but to no resolution.</p>
+                </div>
+                <div class="title">
+                    <h2>Extra-terrestrial</h2>
+                </div>
+                <div class="wrapper">
+                    <div class="carousel">
+                        <a href="Flying.html"> <img src="flying.jpeg" alt="img" draggable="false"></a>
+                        <a href="Rendlesham.html"> <img src="Rendlesham.jpg" alt="img" draggable="false"></a>
+                        <a href="belgium.html"> <img src="belgium.jpg" alt="img" draggable="false"></a>
+                        <a href=".html"> <img src="Roswell.jpg" alt="img" draggable="false"></a>
+                        <a href="Scott.html"> <img src="miguel.jpg" alt="img" draggable="false"></a>
+                    </div>
+                </div>
+                <div class="wrapper">
+                <div class="description">
+                    <p>Stories that involve beyond earthly creatures, objects, and lifeform.</p>
+                </div>
+            <div class="title">
+                <h2>Uninvestigated</h2>
+            </div>
+            <div class="wrapper">
+                <div class="carousel">
+                    <a href="neighbor.html"> <img src="neighbor.jpg" alt="img" draggable="false"></a>
+                    <a href="navy.html"> <img src="navy.jpg" alt="img" draggable="false"></a>
+                    <a href="dumpster.html"> <img src="dumpster.jpg" alt="img" draggable="false"></a>
+                </div>
+            </div>
+            <div class="wrapper">
+            <div class="description">
+                <p>No records. No one convicted. Stories that readers and writers of this 
+                page have witnessed.</p>
+            </div>
+
+            <div class="title">
+                <h2>Podcasts</h2>
+            </div>
+            <div class="podcasts">
+                <div class="titles">
+                    <h2>Stolen</h2>
+                </div>
+                <div class="pod-desc">
+                    <p>Violence. Retaliation. Disappearances. The Navajo Nation is 27,000 square miles of remote terrain with 
+                        just over 200 tribal police officers. This season on Stolen, Connie Walker’s investigation into the cases 
+                        of two missing women leads her on a search for justice in a place where people say you can get away with murder.</p>
+                </div>
+                <div class="podcast-link">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/22VuvJVTKWZPVvvOMJBDEl?utm_source=generator" width="60%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="titles">
+                    <h2>The Black Dahlia Murders</h2>
+                </div>
+                <div class="pod-desc">
+                    <p>In 1940s Hollywood, a 22-year-old aspiring actress is found mutilated and drained of blood. Her body is posed, and her 
+                        mouth has been carved into a permanent smile. The investigation takes police into the hidden sides of the city — illicit 
+                        romances and gang-related crimes. But when another mutilated body is found weeks later, the hunt is on for a possible 
+                        serial killer. This is a crossover series with Unsolved Murders, looking at the murder of Elizabeth Short and other 
+                        unsolved cases surrounding it.</p>
+                </div>
+                <div class="podcast-link">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/4prUYzkC9CASt5m66vAqCA?utm_source=generator" width="60%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="titles">
+                    <h2>Beyond All Repair</h2>
+                </div>
+                <div class="pod-desc">
+                    <p>Imagine if, one day, you are accused of something. Something horrible, violent, heinous. Something you swear you did not do, 
+                        and nothing you say can convince anyone otherwise — even the people closest to you.
+                        That’s Sophia Johnson’s story.
+                        Sophia was starting fresh: A new life, a new husband, a baby on the way. But it all unraveled on January 10, 2002, when her 
+                        mother-in-law Marlyne Johnson was found bludgeoned to death in her home. Days later, Sophia was charged with the murder. To 
+                        this day, Sophia swears she didn’t do it. But someone says they witnessed it — her own brother.
+                        When family betrays family, who do you believe? In this story of a sibling rivalry beyond compare, WBUR’s Amory Sivertson 
+                        turns the clock back. She reexamines an unsolved case, a family torn apart, and a woman who wasn’t believed.</p>
+                </div>
+                <div class="podcast-link">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7nlt2S9HefKXyd5WOiIg3j?utm_source=generator" width="60%" height="250" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        
+            const carouselContainers = document.querySelectorAll(".wrapper");
+
+            
+            carouselContainers.forEach(container => {
+                const carousel = container.querySelector(".carousel");
+                const arrowIcons = container.querySelectorAll("i");
+
+                
+                let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+
+                const showHideIcons = () => {
+                    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+                    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+                    arrowIcons[1].style.display = carousel.scrollLeft >= scrollWidth ? "none" : "block";
+                };
+
+                arrowIcons.forEach(icon => {
+                    icon.addEventListener("click", () => {
+                        carousel.scrollLeft += icon.classList.contains("fa-angle-left") ? -firstImgWidth : firstImgWidth;
+                        showHideIcons();
+                    });
+                });
+
+                const autoSlide = () => {
+                    if (carousel.scrollLeft === 0 || carousel.scrollLeft >= carousel.scrollWidth - carousel.clientWidth) return;
+                    let valDifference = positionDiff - (carousel.scrollLeft - prevScrollLeft);
+
+                    if (carousel.scrollLeft > prevScrollLeft) {
+                        carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+                    } else {
+                        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+                    }
+                };
+
+                const dragStart = (e) => {
+                    isDragStart = true;
+                    prevPageX = e.pageX || e.touches[0].pageX;
+                    prevScrollLeft = carousel.scrollLeft;
+                };
+
+                const dragging = (e) => {
+                    if (!isDragStart) return;
+                    e.preventDefault();
+                    isDragging = true;
+                    carousel.classList.add("dragging");
+                    positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+                    carousel.scrollLeft = prevScrollLeft - positionDiff;
+                    showHideIcons();
+                };
+
+                const dragStop = () => {
+                    isDragStart = false;
+                    carousel.classList.remove("dragging");
+                    if (!isDragging) return;
+                    isDragging = false;
+                    autoSlide();
+                };
+
+                carousel.addEventListener("mousedown", dragStart);
+                carousel.addEventListener("touchstart", dragStart);
+
+                document.addEventListener("mousemove", dragging);
+                carousel.addEventListener("touchmove", dragging);
+
+                document.addEventListener("mouseup", dragStop);
+                carousel.addEventListener("touchend", dragStop);
+            });
+
+        </script>
+
+        
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

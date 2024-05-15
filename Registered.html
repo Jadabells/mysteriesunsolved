@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Registered </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+        }
+
+        .footerBottom {
+            position:relative;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 1000000;
+            margin-top: 200px;
+        }
+
+        .container {
+            margin: 70px;
+        }
+
+ 
+        .pageone {
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+          
+        }
+
+        .pageone a {
+            grid-template-columns: repeat(3,2fr);
+            grid-gap: 20px 20px;
+            display: flex;
+        }
+
+        .pageone img {
+            height: 250px;
+            width: 230px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .story-container {
+            display: flex;
+        }
+
+        .story-description {
+            margin: 1em;
+            color: white;
+        }
+
+        .story-description{
+            width: 310px;
+            background-color: #6347477a;
+            padding: 20px 20px;
+            border-style: ridge;
+            margin-top: 0;
+        }
+
+        
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Submit a story.html">Submit a story</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="Login.html">Login</a>
+            </nav>
+        </header>
+    
+        <body>
+            <div class ="container">
+                <div class ="title-container">
+                    <h1>UNSOLVED REGISTERED CASES</h1>    
+                </div>
+                <div class="pageone">
+                    <div class="story-container" onclick="window.location.href = 'Scott.html';">
+                        <img src="Scott.avif" alt="img"> 
+                        <div class = "story-description">FARMER SHOT, DISCOVERED BY DRIVER<br>
+                        Date: July 2010<br>
+                        New Zealand<br>
+                        <br>
+                        Found dead with shotgun wounds at the end of his driveway, Scott fails to receive juctice as the suspect who was arrested 
+                        for his death was found not guilty in court.  </div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href = 'Keith.html';">
+                        <img src="Keith.webp" alt="img"> <div class = "story-description">YOUTUBER DEAD, CO-STAR SUSPECT?<br>
+                            Date: January 2013<br>
+                            Georgia<br>
+                            <br>
+                            A Kentucky man named Keith Ratliff, the co-owner of FPS Industries (a custom firearms fabrication and testing 
+                            company) and a member of the FPSRussia production team, was found shot dead in his home in Carnesville, Georgia. </div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href = 'dupontstory.html';">
+                        <img src="DUPONT.jpg" alt="img">  <div class = "story-description">WHOLE FAMILY DEAD, FATHER M.I.A<br>
+                            Date: April 2011<br>
+                            France<br>
+                            <br>
+                            The six-member Dupont de Ligonnès family lived at 55 Robert-Schuman Boulevard, a narrow two-story residence in a wealthy 
+                            residential area west of the city. Their bodies were found buried in their garden on April 21. Xavier disappeared at the 
+                            same time and has not been found.   </div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href = 'miguel.html';">
+                        <img src="miguel.jpg" alt="img">  <div class = "story-description">JOURNALIST MURDERED IN MEXICO<br>
+                            Date: February 2012<br>
+                            Mexico City<br>
+                            <br>
+                            On the night of October 9, 2008, Miguel Angel Villagómez Valle was kidnapped on his way home from work after he took 
+                            two colleagues home. </div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href ='wendystiry.html';">
+                        <img src="WENDY.jpeg" alt="img">  <div class = "story-description">JOURNALIST MURDERED IN MEXICO<br>
+                            Date: February 2012<br>
+                            South Tampa<br>
+                            <br>
+                            Wendy Albano was an American businesswoman murdered in 2012 in a hotel room in Bangkok. Authorities in the U.S. contacted 
+                            the United States Department of State, leading to the arrest of a suspect hiding in India in 2014. </div></a>
+                    </div>
+            </div>
+        </body>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

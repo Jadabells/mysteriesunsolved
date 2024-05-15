@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Uninvestigated</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+        }
+
+        .footerBottom {
+            position:relative;
+            margin: auto;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 1000000;
+            margin-top: 200px;
+        }
+
+        .container {
+            margin: 70px;
+        }
+
+ 
+        .pageone {
+            display:grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+          
+        }
+
+        .pageone a {
+            grid-template-columns: repeat(3,2fr);
+            grid-gap: 20px 20px;
+            display: flex;
+        }
+
+        .pageone img {
+            height: 250px;
+            width: 230px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .story-container {
+            display: flex;
+        }
+
+        .story-description {
+            margin: 1em;
+            color: white;
+        }
+
+        .story-description{
+            width: 310px;
+            background-color: #6347477a;
+            padding: 20px 20px;
+            border-style: ridge;
+            margin-top: 0;
+        }
+
+        
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Submit a story.html">Submit a story</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="Login.html">Login</a>
+            </nav>
+        </header>
+    
+        <body>
+            <div class ="container">
+                <div class ="title-container">
+                    <h1>UNINVESTIGATED</h1>    
+                </div>
+                <div class="pageone">
+                    <div class="story-container" onclick="window.location.href = 'neighbor.html';">
+                        <img src="neighbor.jpg" alt="img"> 
+                        <div class = "story-description">NEIGHBOR'S WITNESS<br>
+                        Date: 2018<br>
+                        Anonymous<br>
+                        <br>
+                        Saw my neighbor get killed by masked men. </div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href = 'dumpster.html';">
+                        <img src="dumpster.jpg" alt="img"> <div class = "story-description">MAN IN THE DUMPSTER<br>
+                            Date: 1992<br>
+                            <br>
+                            <br>
+                            Saw a man shoving a dead guy on the apartment dumpster.</div></a>
+                    </div>
+                    <div class="story-container" onclick="window.location.href = 'navy.html';">
+                        <img src="navy.jpg" alt="img">  <div class = "story-description">LIGHTS AND TRIANGLE UFOs<br>
+                            Date: 1965<br>
+                            NAVCOMSTA Washington, DC. <br>
+                            <br>
+                            I have witnessed a murder when I was 21. Now I am 71 and time has healed the wounds. I was in the Navy from 64–68 </div></a>
+                    </div>
+            </div>
+        </body>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

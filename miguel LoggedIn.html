@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Miguel </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .container p{
+            font-size: larger;
+            justify-content: unset;
+        }
+
+        .story {
+            background-color: rgba(126, 111, 111, 0.718);
+            border-radius: 20px;
+            padding: 0px 20px 0px 20px;
+            color: white;
+            text-indent: 20px;
+
+        }
+
+        #youtubeVideo {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+    }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-box {
+            color: white;
+            width: 80%;
+            align-items: center;
+        }
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="HomeLoggedIn.html">Home</a>
+                <a href="Submit a story LoggedIn.html">Submit a story</a>
+                <a href="Categories.html">Categories</a>
+                <a href="ContactUs LoggedIn.html">Contact Us</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </header>
+    
+    
+    <div>
+        <body>
+
+            <h1>Miguel Angel Villagómez Valle</h1>
+
+        
+    <div class="container">
+        <div class="media-container">
+        <img src="miguel.jpg" alt="Scott">
+            <div id="youtubeVideo">
+                <iframe width="300" height="auto" src="https://www.youtube.com/embed/1MthaRIvf6A?si=LS6MbxvSjSvLRPaV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div> 
+        </div>
+        <div class="story">
+            <p>Miguel Angel Villagómez Valle (ca. 1979 – 10 October 2008) was a Mexican journalist, editor and publisher who founded and operated the 
+                newspaper La Noticia de Michoacán in 2004 until his murder in La Unión, Guerrero, Mexico.</p>
+
+            <p>In the weeks leading up to his death, Miguel Angel Villagómez Valle received a threatening call from a man who claimed to be a part of 
+                the Los Zetas, a militant group of former soldiers who works for the cartel. He warned his family of the threats and asked them to 
+                be alert. On the night of October 9, 2008, Miguel Angel Villagómez Valle was kidnapped on his way home from work after he took two 
+                colleagues home.The state attorney said that minutes later, he was intercepted by at least two cars with armed individuals who abducted 
+                him. On the following day, police found his body at around 10 a.m. at the side of the road near a dump about a kilometer away from the 
+                exit to the town of La Unión. His body was covered in bruises and had six gunshot wounds to the back and one to the head. His 
+                body also had the coup de grâce.His body was taken to Zihuatanejo where the investigation continued. His murder may have been linked
+                to his work. He was the seventh journalist killed in 2008. The motive was unknown at the time of the murder.</p>
+
+            <p>The murder of Miguel Angel Villagómez Valle was condemned by the IAPA (Inter American Press Association) on 10 October 2008. The 
+                organization urged authorities to find who planned and carried out the crime. Soon after his death Mexico's Human Rights 
+                Commission appealed for the murders of journalists to be thoroughly investigated and called for an end to the impunity. His name 
+                was added to the Newseum modern wall in Washington, D.C.</p>
+        </div>
+    </div>
+
+    <div class="comment-box">
+        <div class="comment-head">    
+            <h2>Comment Section</h2>
+        </div>
+
+        
+        <form id="commentForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                
+            <input type="submit" value="Submit">
+            </form>
+
+            <div id="comments">
+                <!-- Comments here -->
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var comment = document.getElementById('comment').value;
+            
+            var newComment = document.createElement('div');
+            newComment.innerHTML = '<strong>' + name + ':</strong> ' + comment;
+            
+            document.getElementById('comments').appendChild(newComment);
+            
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Man in the Dumpster </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .container p{
+            font-size: larger;
+            justify-content: unset;
+        }
+
+        .story {
+            background-color: rgba(126, 111, 111, 0.718);
+            border-radius: 20px;
+            padding: 0px 20px 0px 20px;
+            color: white;
+            text-indent: 20px;
+
+        }
+
+        #youtubeVideo {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-box {
+            color: white;
+            width: 80%;
+            align-items: center;
+        }
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Submit a story.html">Submit a story</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="Login.html">Login</a>
+            </nav>
+        </header>
+    
+    
+    <div>
+        <body>
+
+            <h1>Man in the Dumpster</h1>
+
+        
+    <div class="container">
+        <div class="media-container">
+        <img src="dumpster.jpg" alt="dumpster">
+        </div>
+        <div class="story">
+            <p>Yes, when I was a kid I saw a man get chased down, shot dead, and then stuffed in a Dumpster next to my apartment building.
+
+                I was a 15-year-old runaway and staying in a sleazy part of town because I had nowhere else to sleep. Apparently Bad Guy A had ripped off Bad Guy B in a drug deal and had been spotted in my neighborhood that morning. I was staying in Ana 3-story apartment building that directly overlooked an ally below, and was casually hanging out my bathroom window when I saw Bad Guy B standing at the top of the street. When Bad Guy B saw that his enemy was driving up the ally he starting walking down the ally. I knew it was not going to end well when he pulled out a gun and picked up speed.
+                
+                In a valiant attempt to avoid his fate, Bad Guy A suddenly shifted into reverse but wasn’t able to negotiate the narrow space well enough and crashed into my building. Bad Guy B was already too close as Bad Guy A struggled to get out of the car and run down the ally. He wasn’t quite fast enough and was shot several times from a few feet away.
+                
+                In a matter of minutes Bad Guy B's drug pals had arrived on the scene, so they must have been somewhere nearby, and they swiftly and efficiently chucked the body into the dumpster that was sitting right below my living room window.
+                
+                When the shooter, all sweaty, gun still in hand, looked up at me I merely shrugged as if to say, "What can you do? Shit happens." Nevertheless, he and his pals watched me carefully from across the street while I sat next to the Dumpster and told the cops I’d slept through the entire event and knew nothing.
+                
+                Although I’d come from a "good" family and had never witnessed any crime before that day, I wasn’t stupid and kept my mouth shut. I saw the shooter (my neighbor) and his pals several times after that and learned to give them a cordial semi-smile.
+                
+                That’s only one a few traumatic incidents that happened in my short time as a runaway, but when I recounted my history in therapy years later I was told that therapy only works if I commit to telling the truth. Through the years I’d tested my family also to see if I could confide in someone, but they, too, suggested that I stop making up stories.
+                
+                Bottom line is that I have PTSD, I’m often depressed but I hide it well, and I have enough true stories to write a novel but nobody would ever believe me. </p>
+        </div>
+    </div>
+
+    <div class="comment-box">
+        <div class="comment-head">    
+            <h2>Comment Section</h2>
+        </div>
+
+        
+        <form id="commentForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                
+            <input type="submit" value="Submit">
+            </form>
+
+            <div id="comments">
+                <!-- Comments here -->
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var comment = document.getElementById('comment').value;
+            
+            var newComment = document.createElement('div');
+            newComment.innerHTML = '<strong>' + name + ':</strong> ' + comment;
+            
+            document.getElementById('comments').appendChild(newComment);
+            
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

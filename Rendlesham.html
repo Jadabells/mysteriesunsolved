@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Rendlesham </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .container p{
+            font-size: larger;
+            justify-content: unset;
+        }
+
+        .story {
+            background-color: rgba(126, 111, 111, 0.718);
+            border-radius: 20px;
+            padding: 0px 20px 0px 20px;
+            color: white;
+            text-indent: 20px;
+
+        }
+
+        #youtubeVideo {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+    }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-box {
+            color: white;
+            width: 80%;
+            align-items: center;
+        }
+
+    </style>
+    
+    <header>
+        <nav>
+            <a href="HomeLoggedIn.html">Home</a>
+            <a href="Submit a story.html">Submit a story</a>
+            <a href="Categories.html">Categories</a>
+            <a href="Reviews.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    
+    
+    <div>
+        <body>
+
+            <h1>The Rendlesham Forest Incident</h1>
+
+        
+    <div class="container">
+        <div class="media-container">
+        <img src="Rendlesham.jpg" alt="Flying">
+            <div id="youtubeVideo">
+                <iframe width="300" height="auto" src="https://www.youtube.com/embed/9kUromZCP9M?si=WRPR_VxdOXNLH-iO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div> 
+        </div>
+        <div class="story">
+            <p>Sometimes referred to as “Britain’s Roswell,” the U.K.’s most well-known UFO sightings were reported in late 1980 on a Royal 
+                Air Force military base near England’s east coast. On Dec. 26 of that year, the first sighting occurred when two United 
+                States Air Force members reported seeing lights falling to Earth over nearby Rendlesham Forest at around 3 a.m. According 
+                to an official Air Force memo that later documented the incident, the servicemen entered the forest to investigate and saw 
+                a metallic object giving off lights and moving around. When local police arrived, they reportedly didn’t see any lights 
+                other than the bright beacon of a nearby lighthouse, but later discovered markings near the site.</p>
+
+            <p>A few days later, more servicemen went to investigate the forest site and reported seeing three bright lights in the sky 
+                that shone for hours. Astronomers and researchers have disputed the sightings as bright stars and the site markings as 
+                indentations made by animals, while the lieutenant who wrote the memo and a few witnesses maintain what they reported in 
+                December 1980. </p>
+        </div>
+    </div>
+
+    <div class="comment-box">
+        <div class="comment-head">    
+            <h2>Comment Section</h2>
+        </div>
+
+        
+        <form id="commentForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                
+            <input type="submit" value="Submit">
+            </form>
+
+            <div id="comments">
+                <!-- Comments here -->
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var comment = document.getElementById('comment').value;
+            
+            var newComment = document.createElement('div');
+            newComment.innerHTML = '<strong>' + name + ':</strong> ' + comment;
+            
+            document.getElementById('comments').appendChild(newComment);
+            
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

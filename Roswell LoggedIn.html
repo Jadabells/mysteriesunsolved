@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Roswell </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .container p{
+            font-size: larger;
+            justify-content: unset;
+        }
+
+        .story {
+            background-color: rgba(126, 111, 111, 0.718);
+            border-radius: 20px;
+            padding: 0px 20px 0px 20px;
+            color: white;
+            text-indent: 20px;
+
+        }
+
+        #youtubeVideo {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+    }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-box {
+            color: white;
+            width: 80%;
+            align-items: center;
+        }
+
+    </style>
+    
+    <header>
+        <nav>
+            <a href="HomeLoggedIn.html">Home</a>
+            <a href="Submit a story LoggedIn.html">Submit a story</a>
+            <a href="Categories.html">Categories</a>
+            <a href="ContactUs LoggedIn.html">Contact Us</a>
+            <a href="index.html">Logout</a>
+        </nav>
+    </header>
+    
+    
+    <div>
+        <body>
+
+            <h1>Roswell Incident</h1>
+
+        
+    <div class="container">
+        <div class="media-container">
+        <img src="Roswell.jpg" alt="Roswell">
+            <div id="youtubeVideo">
+                <iframe width="300" height="auto" src="https://www.youtube.com/embed/bFiUglPz2sw?si=kRaoojtBr7bjZlpf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div> 
+        </div>
+        <div class="story">
+            <p>The Roswell incident is a collection of events and myths surrounding the 1947 crash of a United States Army Air Forces balloon near 
+                Roswell, New Mexico. Operated from the nearby Alamogordo Army Air Field and part of the top secret Project Mogul, the balloon was 
+                intended to detect Soviet nuclear tests. After metallic and rubber debris was recovered by Roswell Army Air Field personnel, the 
+                United States Army announced their possession of a "flying disc". This announcement made international headlines but was retracted 
+                within a day. Obscuring the true purpose and source of the crashed balloon, the Army subsequently stated that it was a conventional
+                weather balloon.</p>
+
+            <p>1947 flying disc craze
+                Events
+                Kenneth Arnold Flight 105 Roswell Rhodes photographsTwin Falls hoax Maury Island hoax
+                In 1978, retired Air Force officer Jesse Marcel revealed that the Army's weather balloon claim had been a cover story, but speculated 
+                that the debris was of extraterrestrial origin. Popularized by the 1980 book The Roswell Incident, this speculation became the basis 
+                for long-lasting and increasingly complex and contradictory UFO conspiracy theories, which over time expanded the incident to include 
+                governments concealing evidence of extraterrestrial beings, grey aliens, multiple crashed flying saucers, alien corpses and autopsies, 
+                and the reverse engineering of extraterrestrial technology, none of which have any factual basis.</p>
+                
+            <p>Despite the lack of evidence, many UFO proponents claim that the Roswell debris was derived from an alien craft, and accuse the US 
+                government of a cover-up. The conspiracy narrative has become a trope in science fiction literature, film, and television. The town 
+                of Roswell leverages this to promote itself as a destination for UFO-associated tourism.</p>
+        </div>
+    </div>
+
+    <div class="comment-box">
+        <div class="comment-head">    
+            <h2>Comment Section</h2>
+        </div>
+
+        
+        <form id="commentForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                
+            <input type="submit" value="Submit">
+            </form>
+
+            <div id="comments">
+                <!-- Comments here -->
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var comment = document.getElementById('comment').value;
+            
+            var newComment = document.createElement('div');
+            newComment.innerHTML = '<strong>' + name + ':</strong> ' + comment;
+            
+            document.getElementById('comments').appendChild(newComment);
+            
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

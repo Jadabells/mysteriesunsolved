@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Scott Guy </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 100px;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .container img {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .container p{
+            font-size: larger;
+            justify-content: unset;
+        }
+
+        .story {
+            background-color: rgba(126, 111, 111, 0.718);
+            border-radius: 20px;
+            padding: 0px 20px 0px 20px;
+            color: white;
+            text-indent: 20px;
+
+        }
+
+        #youtubeVideo {
+            width: 300px;
+            height: auto;
+            padding: 20px 20px;
+        }
+
+        .media-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .comment-box {
+            color: white;
+            width: 80%;
+            align-items: center;
+        }
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="Submit a story.html">Submit a story</a>
+                <a href="ContactUs.html">Contact Us</a>
+                <a href="Login.html">Login</a>
+            </nav>
+        </header>
+    
+    
+    <div>
+        <body>
+
+            <h1>I Saw My Neighbor's Killers</h1>
+
+        
+    <div class="container">
+        <div class="media-container">
+        <img src="neighbor.jpg" alt="neighbor">
+        </div>
+        <div class="story">
+            <p>I had just returned home from work. My husband was relaxing on our enclosed front porch. As I returned from the bathroom, 
+                my husband told me two guys had just walked in between our house and the neighbor's. He told me that last time that happened, 
+                the neighbor's house got broken into. I told him to keep an eye on things…
+
+                I went to the kitchen to start dinner, and my husband shouted “do you hear that screaming?!?” I hadn't, so I opened our back 
+                door onto our screened in porch, which gave me a good view of the neighbor's back yard. I could see their back door was opened, 
+                and I heard lots of shouting, as well as my female neighbor screaming.
+                
+                I yelled at my husband to call the cops, and as he was doing so I heard 3 gunshots. Then I saw the two guys who had walked in 
+                between our houses run out, one holding a gun, which he then put in his waistband and under his shirt. The two guys ran into the 
+                alley while I was feeding information to the cops through my husband. My neighbor was still screaming.
+                
+                My male neighbor died en route to the hospital, after having been shot in front of his girlfriend and his 6 year old son. 
+                The two guys were captured a few weeks later, in another state. I had to testify at the murder trial. I never heard how the 
+                case was decided.</p>
+        </div>
+    </div>
+
+    <div class="comment-box">
+        <div class="comment-head">    
+            <h2>Comment Section</h2>
+        </div>
+
+        
+        <form id="commentForm">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+                
+            <label for="comment">Comment:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br>
+                
+            <input type="submit" value="Submit">
+            </form>
+
+            <div id="comments">
+                <!-- Comments here -->
+            </div>
+        
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('commentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById('name').value;
+            var comment = document.getElementById('comment').value;
+            
+            var newComment = document.createElement('div');
+            newComment.innerHTML = '<strong>' + name + ':</strong> ' + comment;
+            
+            document.getElementById('comments').appendChild(newComment);
+            
+            document.getElementById('name').value = '';
+            document.getElementById('comment').value = '';
+        });
+    </script>
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>

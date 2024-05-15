@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+
+        .form-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 600px;
+            overflow: hidden;
+            z-index:2;
+        }
+
+        .login-container{
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            transition: .5s ease-in-out;
+            
+        }
+
+        .top span{
+            color: white;
+            font-size:medium;
+            padding: 10px;
+            margin-left: 25px;
+        }
+
+        .top span a{
+            font-weight: 500;
+            color: white;
+        }
+
+        .top header {
+            margin-left: 25px;;
+        }
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);;
+            text-align: center;
+            color: white;
+            z-index: 1000;
+            margin-top: 230px;
+        }
+
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+        .two-forms{
+            display: flex;
+            gap: 70px;
+        }
+
+        .input-field{
+            font-size: 15px;
+            background: rgba(207, 191, 191, 0.778);
+            color: white;
+            height: 50px;
+            width: 100%;
+            padding: 0 10px 0 45px;
+            border: none;
+            border-radius: 30px;
+            outline: none;
+            transition: .2s ease;
+        }
+
+        .inpit-field:hover, .input-field:focus{
+            background:rgb(176, 157, 157);
+        }
+
+        ::-webkit-input-placeholder{
+            color: white;
+        }
+
+        .input-box{
+            position: relative;
+            top: -25px;
+            color: white;
+            padding-bottom: 20px;
+        }
+
+        .submit{
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+            width: 100%;
+            border-radius: 30px;
+            outline: none;
+            background: grey;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+            margin-left: 25px;
+        }
+
+        .submit:hover{
+            background: gainsboro;
+            box-shadow: 1px 5px 7px 1px grey;
+        }
+
+        .one{
+            display: flex;
+            gap: 5px;
+            color: white;
+            text-align: center;
+            margin-left: 25px;
+            margin-top: -40px;
+        }
+        
+    </style>
+
+    <header>
+        <nav> 
+            <a href="index.html">Home</a>
+            <a href="Submit a story.html">Submit a story</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="Login.html">Login</a>
+        </nav>
+    </header>
+
+    <body>
+        <center><div class = "form-box">
+            <div class="login-container" id="login">
+                <div class = "top">
+                    <span> New to this site? <a href="Register.html" onclick="Register()">Register</a></span>
+                    <header>Sign in</header>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email address">
+                    <i class="bx bx-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password">
+                    <i class="bx bx-lock-alt"></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Login" onclick = "window.location.href = 'HomeLoggedin.html';">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check"> Remember Me</label>
+                    </div>
+                </div>
+            </div>
+        </div></center>
+
+
+    </body>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+
+
+</html>

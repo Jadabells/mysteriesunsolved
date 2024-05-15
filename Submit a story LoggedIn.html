@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Homepage </title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            z-index: -1;
+        }
+
+        nav {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            top: 0%;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            z-index: 100000;
+            margin: 0;
+        }
+
+        nav a {
+            justify-content: space-between, center;
+            color: rgb(2, 2, 2);
+            font-size: 30px;
+            padding: 20px 50px;
+            text-decoration: none;
+            width: 80%;
+        }
+
+        nav a:hover {
+            background-color: #4a4949;
+            color: rgb(255, 255, 255);
+        }
+        
+        header {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px 0 30px 0;
+            margin-bottom: 20px;
+        }
+
+
+        footer {
+            position: relative;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(87, 69, 69, 0.488);
+            text-align: center;
+            color: white;
+            z-index: 100000;
+            margin-top: 200px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #695454b3;
+            border-radius: 25px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .info-section, .form {
+            flex: 1 1 30%;
+            padding: 20px;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 30px;
+            border: 1px solid #bd9f9f9e;
+            border-radius:20px;
+            box-sizing: border-box;
+            background-color: #f2eaea9f;
+        }
+
+        textarea {
+            resize: vertical;
+            color: #ded9d9e6;
+
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8a9ba8;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #729bc8;
+        }
+        
+        label{
+            color: white;
+        }
+
+
+    </style>
+    
+        <header>
+            <nav>
+                <a href="HomeLoggedIn.html">Home</a>
+                <a href="Submit a story LoggedIn.html">Submit a story</a>
+                <a href="Categories.html">Categories</a>
+                <a href="ContactUs LoggedIn.html">Contact Us</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </header>
+    
+    
+    <div>
+        <body>
+            <div class="container">
+                <div class="info-section">
+                    <h3>Reminders on Submitting Stories</h3>
+                    <p>Choose Registered Case: <br>
+                        If the story has already been recorded by the authorities, 
+                        and have already investigated the case.
+                    </p>
+                    <p>Choose Extra-terrestrial: <br>
+                        If the story is about the unknown beyond earthly facts, characters,
+                        or unidentified flying objects.
+                    </p>
+                    <p>Choose Uninvestigated: <br>
+                        If the story is a new discovery where there have been no authorities
+                        involved and have never been recorded by the police. This can be a
+                        story only you know..
+                    </p>
+                  </div>
+                
+                <div class="form">
+                <h2>Submit a Story</h2>
+                <form action="#" method="POST">
+                  <label for="title">Title:</label>
+                  <input type="text" id="title" name="title" required>
+            
+                  <label for="Author">Author:</label>
+                  <input type="text" id="author" name="author" required>
+
+                  <label for="Email">Email address:</label>
+                  <input type="text" id="email" name="email" required>
+            
+                  <label for="genre">Genre:</label>
+                  <select id="genre" name="genre" required>
+                    <option value="" disabled selected>Select Genre</option>
+                    <option value="fiction">Registered Case</option>
+                    <option value="non-fiction">Extra-terrestrial</option>
+                    <option value="fantasy">Uninvestigated</option>
+
+                  </select>
+            
+                  <label for="story">Story:</label>
+                  <textarea id="story" name="story" rows="10" required></textarea>
+            
+                  <button type="submit">Submit</button>
+                </form>
+              </div>
+
+        </body>
+    </div>
+
+    <footer>
+        <div class="footerBottom">
+                Copyright &copy; 2024; Designed by Jada
+        </div>
+    </footer>
+</html>
